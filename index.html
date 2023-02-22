@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <section class="home" id="home">
+
+        <div class="texts">
+            <div class="text1">
+                Hello World!
+            </div>
+            <div class="text2">
+                <a class="Iam">I am</a>
+                <a class="name">Qolandar Annuri</a>
+            </div>
+            
+            <form action="#navbar">
+                <button class="button-clickme" type="submit" id="btn-clickme">
+                    <a>Click Me!</a>
+                </button>
+            </form>
+        </div>
+
+        <div class="photo">
+            <img src="foto-diri.png" alt="">
+        </div>
+    </section>
+
+    <header>
+        <nav id="navbar">
+            <input type="checkbox" id="check" />
+            <h1 class="title-nav">My Portofolio</h1>
+            <label for="check" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li class="nav-item"><a href="#profil">Profil</a></li>
+                <li class="nav-item"><a href="#education">Education</a></li>
+                <li class="nav-item"><a href="#achievement">Achievement</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article id="profil">
+            <h2>About Me</h2>
+            <p>
+                Saya <b>Qolandar Annuri</b>, mahasiswa program studi Teknik Informatika Universitas Brawijaya. Saya memiliki ketertarikan terhadap bidang Cybersecurity. Saya lahir pada 27 Juni 2002 di Banyumas, Jawa Tengah. Saya memiliki kegemaran bermain gim dan bermain catur.               
+            </p>
+        </article>
+        <article id="education">
+            <h2>Education</h2>
+            <div>
+                <h3>SMA N 1 Ajibarang</h3>
+                <p>Jurusan MIPA</p>
+            </div>
+            <div>
+                <h3>Universitas Brawijaya</h3>
+                <p>Program Studi Teknik Informatika</p>
+            </div>
+        </article>
+        <article id="achievement">
+            <h2>Achievement</h2>
+            <p>Top 5 CTF iFest 2021</p>
+            <p>3rd Place at CTF iFest 2022</p>
+            <p>3rd Place at TECHCOMPFEST 2023</p>    
+        </article>
+        <article id="contact">
+            <h2>Connect with Me</h2>
+            <div class="container-socmed">
+                <div>
+                    <a href="https://www.linkedin.com/in/qolandar-annuri-167b93216/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <p>Qolandar Annuri</p>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/annuri_o" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <p>annuri_o</p>
+                </div>
+                <div>
+                    <a href="https://www.github.com/inlandsche" target="_blank"><i class="fab fa-github"></i></a>
+                    <p>inlandsche</p>
+                </div>
+            </div>
+            <p><b>Feel free to connect with me :)</b></p>
+        </article>
+
+        <aside class="aside-left">
+            <div class="connect" aria-haspopup="true">
+                <ul> 
+                    <li class="expander" id="socmed-button"><a tabindex="0"><i class="fas fa-link"></i></a></li>
+                    <li class="socmed"><a href="https://www.linkedin.com/in/qolandar-annuri-167b93216/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="socmed"><a href="https://www.instagram.com/annuri_o" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li class="socmed"><a href="https://www.github.com/inlandsche" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <aside class="aside-right">
+            <div class="connect">
+                <ul> 
+                    <li class="expander" id="nav-shortcut-right"><a tabindex="0"><i class="fas fa-bars"></i></a></li>
+                    <li class="nav-icon"><a href="#profil"><i class="fas fa-user"></i></a></li>
+                    <li class="nav-icon"><a href="#education"><i class="fas fa-user-graduate"></i></a></li>
+                    <li class="nav-icon"><a href="#achievement"><i class="fas fa-trophy"></i></a></li>
+                    <li class="nav-icon"><a href="#contact"><i class="fas fa-id-badge"></i></a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Created by Qolandar Annuri</p>
+    </footer>
+</body>
+
+<script>
+    const socmedBtn = document.getElementById('socmed-button');
+    const navBtn = document.getElementById('nav-shortcut-right');
+
+    const socmedIcons = document.getElementsByClassName('socmed');
+    const navIcons = document.getElementsByClassName('nav-icon');
+
+    const btnClickme = document.getElementById('btn-clickme');
+
+    socmedBtn.addEventListener('click', () => {
+        displayit(socmedIcons);
+    })
+
+    navBtn.addEventListener('click', () => {
+        displayit(navIcons);
+    })
+
+    function displayit(classes){
+        for (let index = 0; index < classes.length; index++) {
+            classes[index].classList.toggle('displayit');
+        }
+    }
+
+    if(screen.width < 660){
+        btnClickme.addEventListener('click', () => {
+            displayit(navIcons);
+        })
+    }
+
+</script>
+
+</html>

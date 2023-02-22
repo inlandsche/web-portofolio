@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Sans+Pro&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Inconsolata:wght@600&family=Nanum+Gothic+Coding&family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+
+    background-color: #222831;
+    min-height: 100vh;
+}
+
+.photo{
+    display: flex;
+    justify-content: center;
+
+    background-color: transparent;
+    align-items: center;
+}
+
+.photo > img{
+    width: 52%;
+    border: 5px solid #EEEEEE;
+    border-radius: 100%;
+    box-sizing: content-box;
+}
+
+.texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    margin-inline: auto;
+
+    gap: .5rem;
+
+    font-weight: 500;
+    color: white;
+    font-family: 'PT Mono', monospace;
+    font-size: 40px;
+}
+
+.home .button-clickme{
+    background-color: transparent;
+    border: 1.5px solid rgb(214, 211, 211);
+    border-radius: 10px;
+    
+    width: 15vh;
+    height: 6vh;
+}
+
+.home .button-clickme a{
+    font-size: 2.3vh;
+    font-weight: 600;
+
+    font-family: 'Segoe UI', sans-serif;
+    color: lavender;
+}
+
+.home .button-clickme:hover{
+    border: 2px solid white;
+    background-color: #141516;
+    border-radius: 10px;
+
+    width: 15vh;
+    height: 6vh;
+
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+}
+
+nav{
+    margin-inline: auto;
+    width: 100%;
+
+    background-color: #232529;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    
+    gap: 2rem 4rem;
+}
+
+nav li{
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 150px;
+    min-height: 50px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #EEEEEE;
+
+    font-size: 1.05rem;
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 600;
+}
+
+nav li:hover{
+    cursor: pointer;
+    color: white;
+
+    border-bottom: .5px solid white;
+}
+
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    
+    gap: 1.5rem;
+    background-color: #222831;
+    padding-inline: 3rem;
+}
+
+article h2{
+    margin-bottom: 2.5rem;
+    margin-inline: auto;
+    font-family: 'Inconsolata', sans-serif;
+    color: #EEEEEE;
+
+    font-size: 2rem;
+}
+
+article p{
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    color: #EEEEEE;
+    opacity: 0.8;
+}
+
+.aside-left{
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+
+    z-index: 2;
+}
+
+.aside-right{
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+
+    z-index: 2;
+}
+
+aside .connect{
+    display: flex;
+    height: 100%;
+}
+
+aside .connect ul{
+    padding: 1rem;
+    margin: auto;
+
+    border-radius: 0 15px 15px 0;
+    
+    background-color: #393E46;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.aside-right .connect ul{
+    padding: 1rem;
+    margin: auto;
+
+    border-radius: 15px 0 0 15px;
+    
+    background-color: #393E46;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+aside .connect li {
+    list-style-type: none;
+}
+
+aside .connect li a {
+    text-decoration: none;
+    
+    color: #EEEEEE;
+    font-size: 1.1rem;
+    
+    transition: all .1s ease-in-out;
+}
+   
+aside .connect li a:hover {
+    color: #89b0d9;
+    cursor: pointer;
+}
+
+.socmed{
+    display: none;
+}
+
+.nav-icon{
+    display: none;
+}
+
+.displayit{
+    display: block;
+}
+
+
+/* aside .connect ul:hover li, ul:focus li, ul:active li{
+    display: block;
+} */
+
+/* .expand:hover .socmed{
+    display: block;
+} */
+
+
+.expander{
+    list-style-type: none;
+    text-decoration: none;
+    
+    transition: all .1s ease-in-out;
+}
+
+.expander a{
+    color: #EEEEEE;
+    font-size: 1.1rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    background-color: #232529;
+
+    line-height: 3rem;
+}
+
+footer p{
+    font-family: 'Inconsolata', sans-serif;
+    color: #EEEEEE;
+}
+
+#check{
+    display: none;
+}
+
+nav ul .expand{
+    display: none;
+}
+
+.hamburger{
+    font-size: 1.2rem;
+    color: #EEEEEE;
+
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+}
+
+.title-nav{
+    font-size: 1.5rem;
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 600;
+    color: #EEEEEE;
+
+    margin-inline-start: 1.5rem;
+    display: none;
+}
+
+#profil p{
+    border: 3px solid gray;
+    background-color: #1e1f22;
+
+    border-radius: 3vh;
+    width: 900px;
+
+    padding: 2rem;
+    box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.1);
+}
+
+#education div{
+    background-color: #1e1f22;
+    padding: 1.3rem;
+
+    width: 500px;
+
+    border-radius: 10px;
+    border: 2px solid gray;
+
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.1);
+}
+
+#education h3{
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 24px;
+    color: #EEEEEE;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+#achievement p{
+    background-color: #1e1f22;
+    padding: 1rem;
+
+    width: 30%;
+
+    border-radius: 10px;
+    border: 2px solid gray;
+    font-weight: 600;
+}
+
+.container-socmed{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 5rem;
+    margin-bottom: 2rem;
+
+    background-color: #1e1f223c;
+    width: 600px;
+    padding: 1rem 1.5rem;
+
+    border-radius: 30px;
+}
+
+.container-socmed div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .5rem;
+}
+
+#contact a{
+    text-decoration: none;
+    font-size: 50px;
+    color: #EEEEEECC;
+}
+
+#contact a:hover{
+    color: #EEEEEE;
+}
+
+
+@media screen and (min-width: 800px) {
+    .aside-right{
+        display: none;
+    }
+
+    .photo > img{
+        width: 60%;
+    }
+
+    .texts{
+        margin-inline-start: 5rem;
+    }
+
+}
+
+@media screen and (min-width: 661px) and (max-width: 950px){
+    nav{
+        line-height: .5rem;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: .5rem;
+    }
+
+    nav li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20%;
+    }
+    
+    nav li a{
+        text-decoration: none;
+        color: #EEEEEE;
+    
+    
+        font-size: 1rem;
+        font-family: 'Overpass Mono', monospace;
+        font-weight: 600;
+    }
+
+    .texts{
+        margin-inline-start: 5rem;
+        margin-inline-end: 1.3rem;
+        padding: 0;
+        font-size: 160%;
+    }
+    
+    .photo{
+        margin-inline-end: 4rem;
+    }
+
+    .photo > img{
+        width: 17rem;
+    }
+
+    .aside-right{
+        display: none;
+    }
+
+    #achievement p{
+        width: 65%;
+    }
+
+    #education div{
+        width: 65%;
+    }
+
+    #profil p{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 660px){
+    body{
+        width: 100%;
+        height: 100%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .home{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 3rem;
+    }
+
+    .texts{    
+        height: 50%;
+        text-align: center;
+        font-size: 1.5rem;
+
+    }
+
+    .photo{
+        justify-content: center;
+    }
+
+    .home .button-clickme{
+        margin-top: 1rem;
+        border-radius: 20px;
+    }
+
+    .home .button-clickme a{
+        font-size: .85rem;
+        font-weight: 700;
+    
+        font-family: 'PT Mono', monospace;
+        color: lavender;
+    }
+    
+    .home .button-clickme:hover{
+        border: 1px solid white;
+        background-color: #141516;
+        border-radius: 20px;
+    
+        cursor: pointer;
+    }
+
+
+    .aside-right .connect ul{
+        padding: .7rem;
+        gap: 1.2rem;
+
+        background-color: #393e469b;
+    }
+
+    .aside-left .connect ul{
+        padding: .7rem;
+        gap: 1.2rem;
+
+        background-color: #393e469b;
+    }
+
+    aside .connect li a {
+        text-decoration: none;
+        
+        color: #EEEEEE;
+        font-size: .8rem;
+        
+        transition: all .2s ease-in-out;
+        opacity: 1;
+    }
+       
+    aside .connect li a:hover {
+        color: #89b0d9;
+        cursor: pointer;
+    }
+
+    article{
+        padding-inline: 1.5rem;
+    }
+
+    #achievement p{
+        width: 65%;
+    }
+
+    #education div{
+        width: 65%;
+    }
+
+    #education div h3{
+        font-size: 1.2rem;
+    }
+
+    #profil p{
+        width: 75%;
+    }
+
+    .container-socmed{
+        width: 90%;
+        gap: 2.3rem;
+    }
+
+    #contact a{
+        font-size: 2rem;
+    }
+
+    .container-socmed p{
+        font-size: .8rem;
+    }
+}
